@@ -1,0 +1,64 @@
+@font-face{font-family:"Assistant";src:url(fonts/Assistant.ttf);font-weight:200 800;font-display:swap}
+@font-face{font-family:"Secular One";src:url(fonts/SecularOne.ttf);font-display:swap}
+
+:root{--paper:#faf5ec;--ink:#2b2420;--muted:#6f6258;--thread:#d9482b;--moss:#5f7a5a;--sun:#f2c14e;--line:#e6dccb;--r:6px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Assistant",system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:19px;line-height:1.65}
+h1,h2,h3{font-family:"Secular One","Assistant",sans-serif;font-weight:400;line-height:1.15;text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{border-bottom:2px solid var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:"Secular One",sans-serif;font-size:24px;text-decoration:none}
+nav{display:flex;gap:28px}
+nav a{text-decoration:none;font-weight:700;padding:10px 0;border-bottom:3px solid transparent}
+nav a:hover,nav a[aria-current]{border-color:var(--thread)}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,7vw,84px)}
+.hero h1 span{color:var(--thread)}
+.hero p{max-width:34ch;margin:22px 0 30px;font-size:21px}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 28px;border-radius:var(--r);text-decoration:none;font-weight:700;min-height:48px}
+.btn:hover{background:var(--thread)}
+.btn.ghost{background:none;color:var(--ink);border:2px solid var(--ink);margin-inline-start:12px}
+.ph{background:repeating-linear-gradient(135deg,#efe5d2 0 14px,#f5eddd 14px 28px);border:2px dashed #b9a98f;border-radius:var(--r);display:grid;place-items:center;color:var(--muted);font-size:15px;text-align:center;padding:12px}
+.hero .ph{aspect-ratio:4/5;transform:rotate(-2deg)}
+section{padding:64px 0}
+.about{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:#fff8e8}
+.about .wrap{display:grid;grid-template-columns:1fr 2fr;gap:48px}
+.about h2{font-size:38px}
+.about p+p{margin-top:14px}
+.list h2{font-size:38px;margin-bottom:28px}
+.row{display:grid;grid-template-columns:90px 1fr auto;gap:24px;align-items:baseline;padding:24px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row .n{font-family:"Secular One";font-size:40px;color:var(--thread)}
+.row h3{font-size:28px}
+.row p{color:var(--muted)}
+.row a{font-weight:700}
+.quote{background:var(--moss);color:#fff;text-align:center}
+.quote blockquote{font-family:"Secular One";font-size:clamp(26px,4vw,40px);max-width:22ch;margin:0 auto}
+.quote cite{display:block;margin-top:18px;font-style:normal;opacity:.85}
+.ws{padding:56px 0;border-bottom:1px solid var(--line)}
+.ws .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.ws:nth-of-type(even) .wrap>.ph{order:2}
+.ws .ph{aspect-ratio:3/2}
+.ws h2{font-size:42px;margin-bottom:14px}
+.facts{margin:20px 0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:17px}
+.facts dt{font-weight:700}
+.facts dd{margin:0;color:var(--muted)}
+.tag{display:inline-block;background:var(--sun);padding:2px 12px;border-radius:99px;font-size:14px;font-weight:700}
+.page-title{padding:56px 0 24px}
+.page-title h1{font-size:clamp(40px,6vw,68px)}
+.page-title p{max-width:44ch;color:var(--muted);margin-top:12px}
+.cta{background:var(--ink);color:var(--paper);text-align:center}
+.cta h2{font-size:40px;margin-bottom:20px}
+.cta .btn{background:var(--sun);color:var(--ink)}
+footer{padding:32px 0;font-size:16px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--thread);outline-offset:3px}
+@media(max-width:760px){.hero .wrap,.about .wrap,.ws .wrap{grid-template-columns:minmax(0,1fr)}.btn.ghost{margin:12px 0 0}.hero h1{font-size:44px}.ws:nth-of-type(even) .wrap>.ph{order:0}.row{grid-template-columns:56px 1fr}.row a{grid-column:2}.hero .ph{transform:none;aspect-ratio:3/2}nav{gap:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.hero .wrap>*,.about .wrap>*,.ws .wrap>*{min-width:0}
+html,body{overflow-x:hidden}
